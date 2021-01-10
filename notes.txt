@@ -1,0 +1,53 @@
+# GO CLASS - NOTES:
+
+VSCODE:
+	EXT-RUNNER:
+		CTRL + ALT + N: Start Application
+		CTRL + ALT + M: Stop Application
+
+
+Run project on terminal:
+go run app.go
+
+See env vars:
+go env
+
+go version
+
+Using a package in your project:
+go get -u github.com/go-sql-driver/mysql
+
+
+TESTING ---------------------------------
+
+Run Tests in a package
+go test
+
+Run Tests in all project
+
+go test ./...
+
+Run Tests with cover flag
+go test -cover // testando a cobertura do teste no código
+
+go test -coverprofile="resultado.out" 
+go tool cover -func="resultado.out" // go tool trará de forma mais detalhada o que está acontecendo no seu código
+go tool cover -html="resultado.out" // gerando em html
+
+CONCORRÊNCIA x PARALELISMO --------------
+
+Go é uma linguagem concorrente
+
+Paralelismo - executar código simultaneamente em processadores/núcleos físicos diferentes
+
+Concorrência - capacidade de intercalar (administrar) vários processos ao mesmo tempo e isso pode
+ocorrer em um único processador/nucleo físicos
+
+Concorrência viabiliza paralelismo
+
+É possível que a concorrência seja melhor que o paralelismo!
+Paralelismo exige muito mais do OS e do hardware
+
+Concorrência - é a forma de estruturar o seu programa
+é a composição de processos (tipicamente funções) que executam de forma independente
+
